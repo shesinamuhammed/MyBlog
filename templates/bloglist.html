@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	
+	<body>
+		<ul>
+			{% for blog in object_list %}
+
+				<li>{{blog.title}}</li>
+				<li>{{blog.body}}</li>
+				<a href="{% url 'blogedit' pk=blog.id %}">Edit</a>
+				<a href="{% url 'blogdelete' pk=blog.id %}">Delete</a>
+
+				<h1>{{ object.title }}</h1> 
+				<p>{{ object.body }}</p>
+			{% empty %}
+
+				<li>No blog yet.</li>
+			{% endfor %}
+		</ul>
+		
+		<a href="{% url 'blogcreate' %}">Back to home page</a>
+
+	</body>
+	</html>
