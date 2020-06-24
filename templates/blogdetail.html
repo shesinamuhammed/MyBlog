@@ -1,9 +1,20 @@
-<!DOCTYPE html>
-<html>
-	
-	<body>
-<h1>{{ object.title }}</h1>
-<p>{{ object.body }}</p>
+{% extends  'base.html' %}
+{% block body %}
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+         
+<div class="blog-post">
+            <h2 class="blog-post-title">{{object.title}}</h2>
+            <p class="blog-post-meta">{{object.created_at}}<a href="#">{{object.user.first_name}} {{object.user.last_name}}</a></p>
+            <p class="blog-post-meta">{{object.body}}</p>
 
-</body>
-</html>
+
+         </div>
+     </div>
+ </div>
+</main>
+         
+
+{% endblock %}
+
