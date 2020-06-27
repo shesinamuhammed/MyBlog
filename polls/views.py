@@ -1,4 +1,3 @@
-from django.shortcuts import render,redirect
 from .forms import PostForm, SignUpForm
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView
@@ -10,7 +9,6 @@ from django.views.generic.edit import DeleteView
 from django.views.generic.detail import DetailView 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views as auth_views
-from django.contrib.auth import login, authenticate
 from django.http import HttpResponse, Http404
   
 
